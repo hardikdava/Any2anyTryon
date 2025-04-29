@@ -127,6 +127,7 @@ class Any2AnyTryOn:
             image = result.crop(
                 (lp, tp, image.width - rp, image.height - bp)
             ).resize((input_width, input_height))
+            outputs.append(image)
         end_time = time.time()
         print(f"Time taken: {end_time - start_time} seconds")
         return outputs
